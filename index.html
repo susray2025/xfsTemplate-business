@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xFileSharingTemplates — Premium File Sharing Themes</title>
+  <meta name="description" content="Professional, affordable templates for xFileSharing, xVideoSharing, YetiShare and more. Responsive, customizable, instant download.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-blue: #1a5fc8;
+      --brand-blue-dark: #1148a0;
+      --brand-blue-light: #e8f0fc;
+      --brand-accent: #00c2a8;
+      --dark-bg: #08101e;
+      --dark-card: #0e1a2e;
+      --dark-border: rgba(255,255,255,0.07);
+      --text-muted-custom: #8a9ab5;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --radius-card: 14px;
+      --radius-sm: 8px;
+      --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--dark-bg);
+      color: #e2eaf6;
+      margin: 0;
+    }
+
+    h1, h2, h3, h4, h5, .display-font {
+      font-family: var(--font-display);
+    }
+
+    /* ─── NAVBAR ─────────────────────────────── */
+    .xfs-nav {
+      background: rgba(8,16,30,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--dark-border);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .xfs-nav .navbar-brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+    .xfs-nav .navbar-brand span { color: var(--brand-accent); }
+    .xfs-nav .nav-link {
+      color: var(--text-muted-custom) !important;
+      font-size: 0.875rem;
+      font-weight: 400;
+      padding: 1.1rem 0.85rem !important;
+      transition: color var(--transition);
+      letter-spacing: 0.01em;
+    }
+    .xfs-nav .nav-link:hover,
+    .xfs-nav .nav-link.active { color: #fff !important; }
+    .xfs-nav .navbar-toggler {
+      border: 1px solid var(--dark-border);
+      padding: 6px 10px;
+    }
+    .xfs-nav .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .btn-nav-cta {
+      background: var(--brand-blue);
+      color: #fff !important;
+      border-radius: var(--radius-sm) !important;
+      padding: 0.45rem 1.1rem !important;
+      font-size: 0.875rem !important;
+      font-weight: 500 !important;
+      transition: background var(--transition) !important;
+      border: none;
+      margin-left: 0.5rem;
+    }
+    .btn-nav-cta:hover { background: var(--brand-blue-dark) !important; color: #fff !important; }
+
+    /* ─── HERO ───────────────────────────────── */
+    .hero-section {
+      background: var(--dark-bg);
+      padding: 90px 0 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -120px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(26,95,200,0.13) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(26,95,200,0.15);
+      border: 1px solid rgba(26,95,200,0.3);
+      color: #7eb5ff;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 1.4rem;
+    }
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 1.1rem;
+    }
+    .hero-title .accent { color: var(--brand-accent); }
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted-custom);
+      line-height: 1.7;
+      max-width: 540px;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    .btn-primary-cta {
+      background: var(--brand-blue);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1.6rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      font-family: var(--font-body);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-primary-cta:hover {
+      background: var(--brand-blue-dark);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .btn-outline-cta {
+      background: transparent;
+      color: #e2eaf6;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1.6rem;
+      font-size: 0.95rem;
+      font-weight: 400;
+      font-family: var(--font-body);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color var(--transition), background var(--transition);
+    }
+    .btn-outline-cta:hover {
+      border-color: rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+    }
+
+    /* ─── TRUST BAR ───────────────────────────── */
+    .trust-bar {
+      background: var(--dark-card);
+      border-top: 1px solid var(--dark-border);
+      border-bottom: 1px solid var(--dark-border);
+      padding: 14px 0;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted-custom);
+      padding: 4px 0;
+    }
+    .trust-item i {
+      color: var(--brand-accent);
+      font-size: 1rem;
+    }
+
+    /* ─── FILTER BAR ──────────────────────────── */
+    .filter-bar {
+      background: var(--dark-bg);
+      border-bottom: 1px solid var(--dark-border);
+      padding: 14px 0;
+    }
+    .filter-pill {
+      background: transparent;
+      border: 1px solid var(--dark-border);
+      color: var(--text-muted-custom);
+      border-radius: 100px;
+      padding: 5px 16px;
+      font-size: 0.8rem;
+      font-family: var(--font-body);
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .filter-pill:hover {
+      border-color: rgba(255,255,255,0.2);
+      color: #e2eaf6;
+    }
+    .filter-pill.active {
+      background: var(--brand-blue);
+      border-color: var(--brand-blue);
+      color: #fff;
+    }
+    .theme-count-badge {
+      font-size: 0.8rem;
+      color: var(--text-muted-custom);
+    }
+
+    /* ─── SECTION HEADER ─────────────────────── */
+    .section-header { padding: 56px 0 8px; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand-accent);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .section-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted-custom);
+      font-weight: 300;
+      max-width: 500px;
+    }
+
+    /* ─── THEME CARDS ────────────────────────── */
+    .themes-section {
+      padding: 32px 0 60px;
+    }
+    .theme-card {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      transition: border-color var(--transition), transform var(--transition);
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      height: 100%;
+    }
+    .theme-card:hover {
+      border-color: rgba(26,95,200,0.4);
+      transform: translateY(-3px);
+      text-decoration: none;
+    }
+    .theme-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      position: relative;
+      background: #060e1a;
+    }
+    .theme-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .theme-card:hover .theme-thumb img { transform: scale(1.04); }
+    .theme-thumb-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 14px;
+      gap: 8px;
+    }
+    .tp-bar { height: 7px; border-radius: 4px; background: rgba(255,255,255,0.08); }
+    .tp-bar.accent { background: var(--brand-blue); opacity: 0.7; }
+    .tp-row { display: flex; gap: 7px; }
+    .tp-block { height: 38px; border-radius: 5px; background: rgba(255,255,255,0.05); flex: 1; }
+    .tp-block.a { background: rgba(26,95,200,0.25); }
+    .theme-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10,20,40,0.82);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .theme-card:hover .theme-overlay { opacity: 1; }
+    .btn-overlay {
+      padding: 7px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 500;
+      font-family: var(--font-body);
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: opacity var(--transition);
+    }
+    .btn-overlay-ghost {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .btn-overlay-solid {
+      background: var(--brand-blue);
+      color: #fff;
+    }
+    .theme-body { padding: 14px 16px 16px; }
+    .theme-name {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #e2eaf6;
+      margin-bottom: 8px;
+    }
+    .theme-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cat-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 100px;
+      letter-spacing: 0.02em;
+    }
+    .cat-file    { background: rgba(26,95,200,0.15);  color: #7eb5ff; }
+    .cat-video   { background: rgba(239,159,39,0.15); color: #f5c25a; }
+    .cat-image   { background: rgba(29,158,117,0.15); color: #4ecba0; }
+    .cat-mirror  { background: rgba(127,119,221,0.15);color: #b3aff5; }
+    .cat-yeti    { background: rgba(216,90,48,0.15);  color: #f0966a; }
+    .cat-excl    { background: rgba(0,194,168,0.15);  color: #00c2a8; }
+    .theme-price {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      font-family: var(--font-display);
+    }
+
+    /* ─── FEATURES SECTION ───────────────────── */
+    .features-section {
+      background: var(--dark-card);
+      border-top: 1px solid var(--dark-border);
+      border-bottom: 1px solid var(--dark-border);
+      padding: 70px 0;
+    }
+    .feature-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius-card);
+      padding: 24px 22px;
+      height: 100%;
+      transition: border-color var(--transition);
+    }
+    .feature-box:hover { border-color: rgba(26,95,200,0.3); }
+    .feature-icon {
+      width: 42px; height: 42px;
+      border-radius: var(--radius-sm);
+      background: rgba(26,95,200,0.15);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+      font-size: 1.15rem;
+      color: #7eb5ff;
+    }
+    .feature-title {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #e2eaf6;
+      margin-bottom: 6px;
+    }
+    .feature-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted-custom);
+      line-height: 1.6;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    /* ─── FOOTER ──────────────────────────────── */
+    .xfs-footer {
+      background: var(--dark-card);
+      border-top: 1px solid var(--dark-border);
+      padding: 56px 0 0;
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    .footer-brand span { color: var(--brand-accent); }
+    .footer-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted-custom);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 240px;
+    }
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .footer-link {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-muted-custom);
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      font-weight: 300;
+      transition: color var(--transition);
+    }
+    .footer-link:hover { color: #e2eaf6; }
+    .footer-bottom {
+      border-top: 1px solid var(--dark-border);
+      padding: 16px 0;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .footer-bottom p {
+      font-size: 0.8rem;
+      color: var(--text-muted-custom);
+      margin: 0;
+    }
+
+    /* ─── PAGE SYSTEM ─────────────────────────── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ─── DETAIL PAGE ────────────────────────── */
+    .breadcrumb-bar {
+      background: var(--dark-card);
+      border-bottom: 1px solid var(--dark-border);
+      padding: 12px 0;
+    }
+    .breadcrumb { margin: 0; }
+    .breadcrumb-item a {
+      color: var(--text-muted-custom);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color var(--transition);
+    }
+    .breadcrumb-item a:hover { color: #e2eaf6; }
+    .breadcrumb-item.active {
+      color: #e2eaf6;
+      font-size: 0.82rem;
+    }
+    .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.2); }
+
+    .detail-section { padding: 36px 0 60px; }
+    .detail-preview {
+      background: #060e1a;
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      margin-bottom: 12px;
+      aspect-ratio: 16/9;
+    }
+    .detail-preview-inner {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+    }
+    .dp-topbar {
+      height: 36px;
+      background: #030810;
+      display: flex; align-items: center; padding: 0 16px; gap: 8px;
+      flex-shrink: 0;
+    }
+    .dp-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .dp-urlbar {
+      flex: 1; height: 20px; border-radius: 4px;
+      background: rgba(255,255,255,0.05); margin-left: 10px;
+    }
+    .dp-body {
+      flex: 1; background: #0a1628;
+      padding: 16px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .dp-hero { height: 36px; background: rgba(26,95,200,0.3); border-radius: 6px; width: 55%; }
+    .dp-sub { height: 10px; background: rgba(255,255,255,0.07); border-radius: 4px; width: 38%; }
+    .dp-cards { display: flex; gap: 10px; margin-top: 4px; }
+    .dp-card { flex: 1; height: 56px; background: rgba(255,255,255,0.04); border-radius: 6px; border: 1px solid rgba(255,255,255,0.06); }
+    .dp-card.h { background: rgba(26,95,200,0.2); }
+
+    .thumbs-row { display: flex; gap: 8px; }
+    .thumb-mini {
+      flex: 1; aspect-ratio: 16/9;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid transparent;
+      overflow: hidden; cursor: pointer;
+      transition: border-color var(--transition);
+      background: #060e1a;
+    }
+    .thumb-mini.active { border-color: var(--brand-blue); }
+    .thumb-mini:hover { border-color: rgba(26,95,200,0.5); }
+    .tm-top { height: 30%; background: #030810; }
+    .tm-bot { height: 70%; }
+
+    .detail-tabs {
+      border-bottom: 1px solid var(--dark-border);
+      margin: 24px 0 20px;
+      display: flex; gap: 0;
+    }
+    .dtab {
+      background: none; border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted-custom);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      padding: 10px 18px 10px 0;
+      cursor: pointer;
+      margin-bottom: -1px;
+      transition: color var(--transition), border-color var(--transition);
+    }
+    .dtab:hover { color: #e2eaf6; }
+    .dtab.active { color: #7eb5ff; border-bottom-color: var(--brand-blue); font-weight: 500; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .feat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .feat-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.85rem;
+    }
+    .feat-item i { color: var(--brand-accent); font-size: 1rem; margin-top: 1px; flex-shrink: 0; }
+    .feat-item span { color: #c8d8f0; line-height: 1.4; }
+
+    .compat-table { font-size: 0.85rem; }
+    .compat-table td, .compat-table th {
+      padding: 10px 14px;
+      border-color: var(--dark-border) !important;
+      color: #c8d8f0;
+    }
+    .compat-table th { color: var(--text-muted-custom); font-weight: 500; background: rgba(255,255,255,0.02); }
+
+    .install-step {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--dark-border);
+    }
+    .install-step:last-child { border-bottom: none; }
+    .step-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(26,95,200,0.2);
+      border: 1px solid rgba(26,95,200,0.4);
+      color: #7eb5ff;
+      font-size: 0.8rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .step-title { font-weight: 500; color: #e2eaf6; font-size: 0.9rem; margin-bottom: 3px; }
+    .step-desc { font-size: 0.82rem; color: var(--text-muted-custom); line-height: 1.5; margin: 0; }
+
+    .sidebar-card {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius-card);
+      padding: 22px;
+      margin-bottom: 16px;
+    }
+    .price-tag {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .price-note { font-size: 0.8rem; color: var(--text-muted-custom); margin-bottom: 18px; }
+    .btn-buy {
+      width: 100%; padding: 12px;
+      background: var(--brand-blue);
+      color: #fff; border: none;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem; font-weight: 500;
+      font-family: var(--font-body);
+      cursor: pointer; margin-bottom: 8px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      transition: background var(--transition);
+    }
+    .btn-buy:hover { background: var(--brand-blue-dark); }
+    .btn-live-preview {
+      width: 100%; padding: 10px;
+      background: transparent;
+      color: #c8d8f0;
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-family: var(--font-body);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      transition: border-color var(--transition), background var(--transition);
+    }
+    .btn-live-preview:hover {
+      border-color: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.04);
+      color: #fff;
+    }
+    .meta-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--dark-border);
+      font-size: 0.83rem;
+    }
+    .meta-row:last-child { border-bottom: none; }
+    .meta-key { color: var(--text-muted-custom); }
+    .meta-val { color: #e2eaf6; font-weight: 500; }
+
+    .related-title {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-muted-custom); margin-bottom: 12px;
+    }
+    .related-item {
+      display: flex; gap: 10px; align-items: center;
+      padding: 9px;
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius-sm);
+      cursor: pointer; margin-bottom: 8px;
+      text-decoration: none;
+      transition: border-color var(--transition), background var(--transition);
+    }
+    .related-item:hover {
+      border-color: rgba(26,95,200,0.3);
+      background: rgba(26,95,200,0.05);
+    }
+    .related-thumb { width: 52px; height: 34px; border-radius: 4px; flex-shrink: 0; background: #030810; }
+    .related-name { font-size: 0.82rem; font-weight: 500; color: #c8d8f0; }
+    .related-price { font-size: 0.75rem; color: var(--text-muted-custom); }
+
+    /* ─── CONTACT PAGE ───────────────────────── */
+    .contact-section { padding: 50px 0 70px; }
+    .page-eyebrow {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--brand-accent); margin-bottom: 0.5rem;
+    }
+    .page-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 700; letter-spacing: -0.02em;
+      color: #fff; margin-bottom: 0.5rem;
+    }
+    .page-sub {
+      font-size: 0.95rem; color: var(--text-muted-custom);
+      font-weight: 300; max-width: 480px; line-height: 1.7;
+    }
+    .form-section { padding-top: 36px; }
+    .form-label-custom {
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--text-muted-custom);
+      margin-bottom: 5px; display: block;
+    }
+    .form-control-dark {
+      background: rgba(255,255,255,0.04) !important;
+      border: 1px solid var(--dark-border) !important;
+      border-radius: var(--radius-sm) !important;
+      color: #e2eaf6 !important;
+      font-size: 0.875rem !important;
+      font-family: var(--font-body) !important;
+      padding: 10px 14px !important;
+      transition: border-color var(--transition) !important;
+    }
+    .form-control-dark:focus {
+      background: rgba(255,255,255,0.06) !important;
+      border-color: rgba(26,95,200,0.5) !important;
+      box-shadow: 0 0 0 3px rgba(26,95,200,0.1) !important;
+      color: #fff !important;
+      outline: none !important;
+    }
+    .form-control-dark::placeholder { color: rgba(255,255,255,0.2) !important; }
+    .form-select-dark {
+      background-color: rgba(255,255,255,0.04) !important;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%238a9ab5' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+      border: 1px solid var(--dark-border) !important;
+      border-radius: var(--radius-sm) !important;
+      color: #e2eaf6 !important;
+      font-size: 0.875rem !important;
+      font-family: var(--font-body) !important;
+      padding: 10px 14px !important;
+    }
+    .form-select-dark:focus {
+      border-color: rgba(26,95,200,0.5) !important;
+      box-shadow: 0 0 0 3px rgba(26,95,200,0.1) !important;
+      outline: none !important;
+    }
+    .form-select-dark option { background: #0e1a2e; color: #e2eaf6; }
+    .check-label {
+      font-size: 0.82rem; color: var(--text-muted-custom); line-height: 1.5;
+    }
+    .check-label a { color: #7eb5ff; text-decoration: none; }
+    .check-label a:hover { text-decoration: underline; }
+    .btn-submit {
+      background: var(--brand-blue);
+      color: #fff; border: none;
+      border-radius: var(--radius-sm);
+      padding: 12px 28px;
+      font-size: 0.95rem; font-weight: 500;
+      font-family: var(--font-body);
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-submit:hover { background: var(--brand-blue-dark); transform: translateY(-1px); }
+
+    .info-card-dark {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius-card);
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+    .info-card-title {
+      font-family: var(--font-display);
+      font-size: 0.9rem; font-weight: 600;
+      color: #e2eaf6; margin-bottom: 6px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .info-card-title i { color: var(--brand-blue); font-size: 1rem; }
+    .info-card-body {
+      font-size: 0.82rem; color: var(--text-muted-custom);
+      line-height: 1.65; margin: 0;
+    }
+    .info-card-body a { color: #7eb5ff; text-decoration: none; }
+
+    .faq-section { margin-top: 8px; }
+    .faq-label {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-muted-custom); margin-bottom: 12px;
+    }
+    .faq-item { border-bottom: 1px solid var(--dark-border); padding: 12px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 0.875rem; font-weight: 500; color: #e2eaf6; margin-bottom: 4px; }
+    .faq-a { font-size: 0.8rem; color: var(--text-muted-custom); line-height: 1.6; margin: 0; }
+
+    /* ─── RESPONSIVE TWEAKS ──────────────────── */
+    @media (max-width: 767.98px) {
+      .hero-section { padding: 60px 0 50px; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .detail-tabs { flex-wrap: wrap; gap: 4px; }
+      .dtab { padding: 8px 12px 8px 0; font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: HOME
+════════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg xfs-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#" onclick="showPage('home')">
+        x<span>File</span>Sharing<span style="color:var(--text-muted-custom);font-weight:400">Templates</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#" onclick="filterCategory('xFileSharing')">xFileSharing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="filterCategory('xVideoSharing')">xVideoSharing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="filterCategory('xImageSharing')">xImageSharing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="filterCategory('xFileMirror')">xFileMirror</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="filterCategory('Exclusive')">Exclusive</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="filterCategory('Yetishare')">Yetishare</a></li>
+          <li class="nav-item">
+            <a class="nav-link btn-nav-cta" href="#" onclick="showPage('contact')">Get a quote</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="hero-badge">
+            <i class="bi bi-lightning-charge-fill"></i> 50+ professional templates
+          </div>
+          <h1 class="hero-title">
+            Premium themes for<br><span class="accent">file sharing</span> platforms
+          </h1>
+          <p class="hero-subtitle">
+            Custom, responsive templates for xFileSharing, xVideoSharing, YetiShare and more — affordable, ready to install, and fully customizable to match your brand.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#themes" class="btn-primary-cta">
+              Browse themes <i class="bi bi-arrow-down"></i>
+            </a>
+            <a href="#" class="btn-outline-cta" onclick="showPage('contact')">
+              Request custom design
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-flex justify-content-end">
+          <div style="width:100%;max-width:420px;">
+            <div style="background:var(--dark-card);border:1px solid var(--dark-border);border-radius:var(--radius-card);overflow:hidden;">
+              <div style="height:32px;background:#030810;display:flex;align-items:center;padding:0 14px;gap:7px;">
+                <div style="width:8px;height:8px;border-radius:50%;background:#E24B4A;"></div>
+                <div style="width:8px;height:8px;border-radius:50%;background:#EF9F27;"></div>
+                <div style="width:8px;height:8px;border-radius:50%;background:#639922;"></div>
+                <div style="flex:1;height:16px;background:rgba(255,255,255,0.05);border-radius:3px;margin-left:6px;"></div>
+              </div>
+              <div style="background:#0a1628;padding:16px;display:flex;flex-direction:column;gap:9px;">
+                <div style="height:32px;background:rgba(26,95,200,0.3);border-radius:5px;width:58%;"></div>
+                <div style="height:9px;background:rgba(255,255,255,0.06);border-radius:3px;width:36%;"></div>
+                <div style="display:flex;gap:9px;margin-top:4px;">
+                  <div style="flex:1;height:52px;background:rgba(26,95,200,0.18);border-radius:6px;border:1px solid rgba(26,95,200,0.2);"></div>
+                  <div style="flex:1;height:52px;background:rgba(255,255,255,0.04);border-radius:6px;border:1px solid rgba(255,255,255,0.05);"></div>
+                  <div style="flex:1;height:52px;background:rgba(255,255,255,0.04);border-radius:6px;border:1px solid rgba(255,255,255,0.05);"></div>
+                </div>
+                <div style="display:flex;gap:9px;">
+                  <div style="flex:1;height:40px;background:rgba(255,255,255,0.03);border-radius:6px;"></div>
+                  <div style="flex:1;height:40px;background:rgba(255,255,255,0.03);border-radius:6px;"></div>
+                  <div style="flex:1;height:40px;background:rgba(255,255,255,0.03);border-radius:6px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="row g-2">
+        <div class="col-6 col-sm-3">
+          <div class="trust-item"><i class="bi bi-lightning-charge"></i> Instant delivery</div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="trust-item"><i class="bi bi-arrow-repeat"></i> Free revisions</div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="trust-item"><i class="bi bi-sliders"></i> Fully customizable</div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="trust-item"><i class="bi bi-headset"></i> Email support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter bar -->
+  <div class="filter-bar" id="themes">
+    <div class="container">
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <button class="filter-pill active" onclick="filterCategory('All')">All themes</button>
+        <button class="filter-pill" onclick="filterCategory('xFileSharing')">xFileSharing</button>
+        <button class="filter-pill" onclick="filterCategory('xVideoSharing')">xVideoSharing</button>
+        <button class="filter-pill" onclick="filterCategory('xImageSharing')">xImageSharing</button>
+        <button class="filter-pill" onclick="filterCategory('xFileMirror')">xFileMirror</button>
+        <button class="filter-pill" onclick="filterCategory('Yetishare')">Yetishare</button>
+        <button class="filter-pill" onclick="filterCategory('Exclusive')">Exclusive</button>
+        <span class="ms-auto theme-count-badge" id="theme-count">20 themes</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Themes grid -->
+  <section class="themes-section">
+    <div class="container">
+      <div class="row g-4" id="themes-grid">
+
+        <!-- Theme cards generated by JS -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header mb-4">
+        <div class="section-label">Why choose us</div>
+        <h2 class="section-title">Everything you need to launch</h2>
+        <p class="section-sub">Professional themes that save you weeks of development time, at a fraction of the cost.</p>
+      </div>
+      <div class="row g-4 mt-1">
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon"><i class="bi bi-phone"></i></div>
+            <div class="feature-title">Fully responsive</div>
+            <p class="feature-desc">Pixel-perfect on mobile, tablet, and desktop. Built with modern CSS grid and flexbox.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon"><i class="bi bi-palette2"></i></div>
+            <div class="feature-title">Easy to customize</div>
+            <p class="feature-desc">Clean, commented code. Change colors, fonts, and layout with minimal effort.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon"><i class="bi bi-lightning"></i></div>
+            <div class="feature-title">Instant download</div>
+            <p class="feature-desc">Get your theme files immediately after purchase. Installation guide included.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box">
+            <div class="feature-icon"><i class="bi bi-headset"></i></div>
+            <div class="feature-title">Dedicated support</div>
+            <p class="feature-desc">Email support for installation and customization questions. We're here to help.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="xfs-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">x<span>File</span>SharingTemplates</div>
+          <p class="footer-desc">Professional, affordable templates for file sharing platforms. Customizable, responsive, and ready to install.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Products</div>
+          <a href="#" class="footer-link" onclick="filterCategory('xFileSharing')">xFileSharing</a>
+          <a href="#" class="footer-link" onclick="filterCategory('xVideoSharing')">xVideoSharing</a>
+          <a href="#" class="footer-link" onclick="filterCategory('xImageSharing')">xImageSharing</a>
+          <a href="#" class="footer-link" onclick="filterCategory('xFileMirror')">xFileMirror</a>
+          <a href="#" class="footer-link" onclick="filterCategory('Yetishare')">Yetishare</a>
+          <a href="#" class="footer-link" onclick="filterCategory('Exclusive')">Exclusive</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Company</div>
+          <a href="#" class="footer-link" onclick="showPage('contact')">Contact us</a>
+          <a href="#" class="footer-link" onclick="showPage('contact')">Request quote</a>
+          <a href="#" class="footer-link">Terms of use</a>
+          <a href="#" class="footer-link">Privacy policy</a>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-heading">Stay updated</div>
+          <p style="font-size:0.82rem;color:var(--text-muted-custom);font-weight:300;margin-bottom:12px;">Get notified when new templates are released.</p>
+          <div class="d-flex gap-2">
+            <input type="email" placeholder="your@email.com" class="form-control form-control-dark" style="max-width:220px;">
+            <button class="btn-buy" style="width:auto;padding:10px 16px;margin:0;">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 xFileSharingTemplates. All rights reserved.</p>
+        <p>Need something custom? <a href="#" onclick="showPage('contact')" style="color:#7eb5ff;text-decoration:none;">Contact us →</a></p>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /page-home -->
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE: THEME DETAIL
+════════════════════════════════════════════ -->
+<div id="page-detail" class="page">
+
+  <!-- Navbar (repeated for standalone navigation) -->
+  <nav class="navbar navbar-expand-lg xfs-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#" onclick="showPage('home')">
+        x<span>File</span>Sharing<span style="color:var(--text-muted-custom);font-weight:400">Templates</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navDetail">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navDetail">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('home')">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="filterCategory('xFileSharing');showPage('home')">xFileSharing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="filterCategory('xVideoSharing');showPage('home')">xVideoSharing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="filterCategory('Yetishare');showPage('home')">Yetishare</a></li>
+          <li class="nav-item">
+            <a class="nav-link btn-nav-cta" href="#" onclick="showPage('contact')">Get a quote</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#" onclick="showPage('home')">Home</a></li>
+          <li class="breadcrumb-item"><a href="#" id="detail-cat-link">xFileSharing themes</a></li>
+          <li class="breadcrumb-item active" id="detail-breadcrumb-name">Theme Name</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Detail content -->
+  <section class="detail-section">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Left: Preview + tabs -->
+        <div class="col-lg-8">
+          <div class="detail-preview">
+            <div class="detail-preview-inner">
+              <div class="dp-topbar">
+                <div class="dp-dot" style="background:#E24B4A;"></div>
+                <div class="dp-dot" style="background:#EF9F27;"></div>
+                <div class="dp-dot" style="background:#639922;"></div>
+                <div class="dp-urlbar"></div>
+              </div>
+              <div class="dp-body">
+                <div class="dp-hero" id="detail-preview-accent"></div>
+                <div class="dp-sub"></div>
+                <div class="dp-cards">
+                  <div class="dp-card h"></div>
+                  <div class="dp-card"></div>
+                  <div class="dp-card"></div>
+                </div>
+                <div class="dp-cards" style="margin-top:2px;">
+                  <div class="dp-card" style="opacity:0.4"></div>
+                  <div class="dp-card" style="opacity:0.4"></div>
+                  <div class="dp-card" style="opacity:0.4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="thumbs-row">
+            <div class="thumb-mini active"><div class="tm-top"></div><div class="tm-bot" style="background:#0a1628;"></div></div>
+            <div class="thumb-mini"><div class="tm-top" style="background:#1a3a6b;"></div><div class="tm-bot" style="background:#0f2a50;"></div></div>
+            <div class="thumb-mini"><div class="tm-top"></div><div class="tm-bot" style="background:#111;"></div></div>
+            <div class="thumb-mini"><div class="tm-top" style="background:#2e1a4a;"></div><div class="tm-bot" style="background:#1a0e30;"></div></div>
+          </div>
+
+          <div class="detail-tabs">
+            <button class="dtab active" onclick="switchTab('features',this)">Features</button>
+            <button class="dtab" onclick="switchTab('compatibility',this)">Compatibility</button>
+            <button class="dtab" onclick="switchTab('installation',this)">Installation</button>
+          </div>
+
+          <!-- Features tab -->
+          <div class="tab-panel active" id="tab-features">
+            <div class="feat-grid">
+              <div class="feat-item"><i class="bi bi-phone"></i><span>Fully responsive on all screen sizes</span></div>
+              <div class="feat-item"><i class="bi bi-palette2"></i><span>Customizable colors, fonts and layout</span></div>
+              <div class="feat-item"><i class="bi bi-moon-stars"></i><span>Dark mode ready out of the box</span></div>
+              <div class="feat-item"><i class="bi bi-lightning"></i><span>Optimized for fast load times</span></div>
+              <div class="feat-item"><i class="bi bi-shield-check"></i><span>Cross-browser compatible (Chrome, FF, Safari)</span></div>
+              <div class="feat-item"><i class="bi bi-code-slash"></i><span>Clean, well-commented HTML/CSS</span></div>
+              <div class="feat-item"><i class="bi bi-file-zip"></i><span>Instant download after purchase</span></div>
+              <div class="feat-item"><i class="bi bi-chat-dots"></i><span>Email support for setup questions</span></div>
+            </div>
+          </div>
+
+          <!-- Compatibility tab -->
+          <div class="tab-panel" id="tab-compatibility">
+            <table class="table compat-table">
+              <thead>
+                <tr>
+                  <th>Script version</th>
+                  <th>Status</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>xFileSharing Pro 4.1</td>
+                  <td><span class="badge" style="background:rgba(29,158,117,0.15);color:#4ecba0;">Supported</span></td>
+                  <td>Fully compatible, recommended</td>
+                </tr>
+                <tr>
+                  <td>xFileSharing Pro 3.x</td>
+                  <td><span class="badge" style="background:rgba(239,159,39,0.15);color:#f5c25a;">Partial</span></td>
+                  <td>Minor template edits required</td>
+                </tr>
+                <tr>
+                  <td>xFileSharing Pro 2.x</td>
+                  <td><span class="badge" style="background:rgba(226,75,74,0.15);color:#f08080;">Not supported</span></td>
+                  <td>Contact us for custom work</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="font-size:0.82rem;color:var(--text-muted-custom);margin-top:12px;">Not sure which version you're running? <a href="#" onclick="showPage('contact')" style="color:#7eb5ff;text-decoration:none;">Contact us</a> and we'll check compatibility for you.</p>
+          </div>
+
+          <!-- Installation tab -->
+          <div class="tab-panel" id="tab-installation">
+            <div class="install-step">
+              <div class="step-num">1</div>
+              <div>
+                <div class="step-title">Purchase & download</div>
+                <p class="step-desc">Complete the purchase and download the .zip file instantly. Extract it to find the template folder.</p>
+              </div>
+            </div>
+            <div class="install-step">
+              <div class="step-num">2</div>
+              <div>
+                <div class="step-title">Back up your existing theme</div>
+                <p class="step-desc">Before uploading, back up your current <code style="color:#7eb5ff;font-size:0.8rem;">/templates/</code> folder via FTP or your file manager.</p>
+              </div>
+            </div>
+            <div class="install-step">
+              <div class="step-num">3</div>
+              <div>
+                <div class="step-title">Upload via FTP</div>
+                <p class="step-desc">Upload the new template files to your xFileSharing Pro <code style="color:#7eb5ff;font-size:0.8rem;">/templates/</code> directory using FTP or cPanel File Manager.</p>
+              </div>
+            </div>
+            <div class="install-step">
+              <div class="step-num">4</div>
+              <div>
+                <div class="step-title">Activate in admin panel</div>
+                <p class="step-desc">Log in to your admin panel, go to Settings → Template, select the new theme and save.</p>
+              </div>
+            </div>
+            <div class="install-step">
+              <div class="step-num">5</div>
+              <div>
+                <div class="step-title">Clear cache & test</div>
+                <p class="step-desc">Clear your browser cache and server cache if applicable, then visit your site to confirm everything looks correct.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Sidebar -->
+        <div class="col-lg-4">
+          <div class="sidebar-card">
+            <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted-custom);margin-bottom:4px;">One-time price</div>
+            <div class="price-tag" id="detail-price">$19</div>
+            <div class="price-note">Includes installation guide &amp; email support</div>
+            <button class="btn-buy"><i class="bi bi-cart3"></i> Buy now</button>
+            <button class="btn-live-preview"><i class="bi bi-box-arrow-up-right"></i> Live preview</button>
+
+            <div class="mt-3">
+              <div class="meta-row">
+                <span class="meta-key">Category</span>
+                <span id="detail-cat-badge" class="cat-badge cat-file">xFileSharing</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-key">Script version</span>
+                <span class="meta-val">4.1 compatible</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-key">Responsive</span>
+                <span class="meta-val" style="color:#4ecba0;"><i class="bi bi-check-circle-fill"></i> Yes</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-key">Last updated</span>
+                <span class="meta-val">March 2025</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-key">Delivery</span>
+                <span class="meta-val">Instant download</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 4px 0;">
+            <div class="related-title">More like this</div>
+            <a href="#" class="related-item text-decoration-none" onclick="openDetail(1)">
+              <div class="related-thumb" style="background:#1a3a6b;"></div>
+              <div>
+                <div class="related-name">Responsive Gaming Theme</div>
+                <div class="related-price">$19</div>
+              </div>
+            </a>
+            <a href="#" class="related-item text-decoration-none" onclick="openDetail(2)">
+              <div class="related-thumb" style="background:#2e1a4a;"></div>
+              <div>
+                <div class="related-name">XFS Responsive Classy</div>
+                <div class="related-price">$19</div>
+              </div>
+            </a>
+            <a href="#" class="related-item text-decoration-none" onclick="openDetail(4)">
+              <div class="related-thumb" style="background:#0a1f0a;"></div>
+              <div>
+                <div class="related-name">Responsive Classic Green</div>
+                <div class="related-price">$15</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="sidebar-card mt-4" style="text-align:center;">
+            <i class="bi bi-brush" style="font-size:1.6rem;color:var(--brand-blue);margin-bottom:8px;display:block;"></i>
+            <div style="font-size:0.875rem;font-weight:500;color:#e2eaf6;margin-bottom:6px;">Need something custom?</div>
+            <p style="font-size:0.8rem;color:var(--text-muted-custom);margin-bottom:14px;line-height:1.6;">We build bespoke themes tailored to your brand and requirements.</p>
+            <button onclick="showPage('contact')" class="btn-live-preview" style="width:100%;">Request a quote</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (same as home) -->
+  <footer class="xfs-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">x<span>File</span>SharingTemplates</div>
+          <p class="footer-desc">Professional, affordable templates for file sharing platforms. Customizable, responsive, and ready to install.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Products</div>
+          <a href="#" class="footer-link" onclick="filterCategory('xFileSharing');showPage('home')">xFileSharing</a>
+          <a href="#" class="footer-link" onclick="filterCategory('xVideoSharing');showPage('home')">xVideoSharing</a>
+          <a href="#" class="footer-link" onclick="filterCategory('xImageSharing');showPage('home')">xImageSharing</a>
+          <a href="#" class="footer-link" onclick="filterCategory('xFileMirror');showPage('home')">xFileMirror</a>
+          <a href="#" class="footer-link" onclick="filterCategory('Yetishare');showPage('home')">Yetishare</a>
+          <a href="#" class="footer-link" onclick="filterCategory('Exclusive');showPage('home')">Exclusive</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Company</div>
+          <a href="#" class="footer-link" onclick="showPage('contact')">Contact us</a>
+          <a href="#" class="footer-link" onclick="showPage('contact')">Request quote</a>
+          <a href="#" class="footer-link">Terms of use</a>
+          <a href="#" class="footer-link">Privacy policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 xFileSharingTemplates. All rights reserved.</p>
+        <p>Need something custom? <a href="#" onclick="showPage('contact')" style="color:#7eb5ff;text-decoration:none;">Contact us →</a></p>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /page-detail -->
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE: CONTACT / QUOTE
+════════════════════════════════════════════ -->
+<div id="page-contact" class="page">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg xfs-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#" onclick="showPage('home')">
+        x<span>File</span>Sharing<span style="color:var(--text-muted-custom);font-weight:400">Templates</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContact">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContact">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('home')">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="filterCategory('xFileSharing');showPage('home')">Themes</a></li>
+          <li class="nav-item">
+            <a class="nav-link btn-nav-cta active" href="#">Get a quote</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#" onclick="showPage('home')">Home</a></li>
+          <li class="breadcrumb-item active">Request a quote</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Contact content -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="page-eyebrow">Get in touch</div>
+      <h1 class="page-title">Request a quote or custom design</h1>
+      <p class="page-sub">Tell us what you need and we'll get back to you within 24 hours with a tailored price and plan.</p>
+
+      <div class="row g-5 form-section">
+
+        <!-- Form -->
+        <div class="col-lg-7">
+
+          <!-- Success message (hidden by default) -->
+          <div id="form-success" style="display:none;background:rgba(29,158,117,0.1);border:1px solid rgba(29,158,117,0.3);border-radius:var(--radius-card);padding:24px;margin-bottom:24px;text-align:center;">
+            <i class="bi bi-check-circle-fill" style="font-size:2rem;color:#4ecba0;margin-bottom:10px;display:block;"></i>
+            <div style="font-size:1rem;font-weight:500;color:#e2eaf6;margin-bottom:6px;">Message sent!</div>
+            <p style="font-size:0.85rem;color:var(--text-muted-custom);margin:0;">We'll get back to you within 24 hours. Check your email for confirmation.</p>
+          </div>
+
+          <div id="contact-form">
+            <div class="row g-3 mb-3">
+              <div class="col-sm-6">
+                <label class="form-label-custom" for="fname">First name *</label>
+                <input type="text" id="fname" class="form-control form-control-dark" placeholder="Your name" required>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label-custom" for="femail">Email address *</label>
+                <input type="email" id="femail" class="form-control form-control-dark" placeholder="you@example.com" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-custom" for="fscript">Which script are you using? *</label>
+              <select id="fscript" class="form-select form-select-dark">
+                <option value="">Select a platform…</option>
+                <option>xFileSharing Pro</option>
+                <option>xVideoSharing</option>
+                <option>xImageSharing</option>
+                <option>xFileMirror</option>
+                <option>YetiShare</option>
+                <option>Other / not sure</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-custom" for="freqtype">Type of request *</label>
+              <select id="freqtype" class="form-select form-select-dark">
+                <option value="">Select a type…</option>
+                <option>Buy an existing theme</option>
+                <option>Custom theme from scratch</option>
+                <option>Modify an existing theme</option>
+                <option>Theme installation help</option>
+                <option>Other question</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-custom" for="fbudget">Approximate budget (optional)</label>
+              <select id="fbudget" class="form-select form-select-dark">
+                <option value="">Not sure yet</option>
+                <option>Under $30</option>
+                <option>$30 – $75</option>
+                <option>$75 – $150</option>
+                <option>$150+</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-custom" for="furl">Your website URL (optional)</label>
+              <input type="url" id="furl" class="form-control form-control-dark" placeholder="https://yoursite.com">
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label-custom" for="fdetails">Project details *</label>
+              <textarea id="fdetails" class="form-control form-control-dark" rows="5"
+                placeholder="Describe what you're looking for — colors, layout preferences, reference sites, specific features needed…"></textarea>
+            </div>
+
+            <div class="form-check mb-4 d-flex align-items-start gap-2">
+              <input class="form-check-input mt-1" type="checkbox" id="fagree" style="flex-shrink:0;background:rgba(255,255,255,0.05);border-color:var(--dark-border);">
+              <label class="check-label" for="fagree">
+                I agree to the <a href="#">terms of use</a> and understand my details will only be used to respond to this enquiry.
+              </label>
+            </div>
+
+            <button class="btn-submit" onclick="submitForm()">
+              <i class="bi bi-send"></i> Send request
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Info sidebar -->
+        <div class="col-lg-5">
+
+          <div class="info-card-dark">
+            <div class="info-card-title"><i class="bi bi-clock"></i> Response time</div>
+            <p class="info-card-body">We typically reply within 24 hours on business days. For urgent requests, mention it in your message and we'll prioritize.</p>
+          </div>
+
+          <div class="info-card-dark">
+            <div class="info-card-title"><i class="bi bi-envelope"></i> Prefer email?</div>
+            <p class="info-card-body">Reach us directly at <a href="mailto:support@xfilesharingtemplates.com">support@xfilesharingtemplates.com</a> — same response time guarantee.</p>
+          </div>
+
+          <div class="info-card-dark">
+            <div class="info-card-title"><i class="bi bi-brush"></i> Custom designs</div>
+            <p class="info-card-body">We build bespoke themes from scratch based on your brief. Describe your vision and we'll send a no-obligation quote.</p>
+          </div>
+
+          <div class="faq-section">
+            <div class="faq-label">Common questions</div>
+            <div class="faq-item">
+              <div class="faq-q">Can I request changes after purchase?</div>
+              <p class="faq-a">Yes — minor modifications like colors and fonts are included free. Larger changes are quoted separately.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Do you install the theme for me?</div>
+              <p class="faq-a">Installation guides are always included. Assisted installation by our team is available for a small additional fee.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Which script versions are supported?</div>
+              <p class="faq-a">Most themes support xFileSharing Pro 4.1+. Exact version requirements are listed on each theme's detail page.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Can I get a refund if the theme doesn't fit?</div>
+              <p class="faq-a">We offer support to resolve any compatibility issues first. If the issue can't be resolved, contact us for a refund review.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="xfs-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">x<span>File</span>SharingTemplates</div>
+          <p class="footer-desc">Professional, affordable templates for file sharing platforms.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Products</div>
+          <a href="#" class="footer-link" onclick="filterCategory('xFileSharing');showPage('home')">xFileSharing</a>
+          <a href="#" class="footer-link" onclick="filterCategory('xVideoSharing');showPage('home')">xVideoSharing</a>
+          <a href="#" class="footer-link" onclick="filterCategory('Yetishare');showPage('home')">Yetishare</a>
+          <a href="#" class="footer-link" onclick="filterCategory('Exclusive');showPage('home')">Exclusive</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Company</div>
+          <a href="#" class="footer-link" onclick="showPage('contact')">Contact us</a>
+          <a href="#" class="footer-link">Terms of use</a>
+          <a href="#" class="footer-link">Privacy policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 xFileSharingTemplates. All rights reserved.</p>
+        <p><a href="#" onclick="showPage('home')" style="color:#7eb5ff;text-decoration:none;">← Back to themes</a></p>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /page-contact -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+  /* ── Theme data ─────────────────────────────────────── */
+  const themes = [
+    { id:0,  name:'Responsive Classic Dark',      cat:'xFileSharing',  price:'$19', bg:'#0a1628', accent:'#185FA5', responsive:true },
+    { id:1,  name:'Responsive Gaming Theme',      cat:'xFileSharing',  price:'$19', bg:'#1b1a10', accent:'#e66000', responsive:true },
+    { id:2,  name:'XFS Responsive Classy',        cat:'xFileSharing',  price:'$19', bg:'#12101a', accent:'#7F77DD', responsive:true },
+    { id:3,  name:'Responsive Beautiful',         cat:'xFileSharing',  price:'$19', bg:'#0e1a10', accent:'#1D9E75', responsive:true },
+    { id:4,  name:'Classic Green Design',         cat:'xFileSharing',  price:'$15', bg:'#0a1f0a', accent:'#3B6D11', responsive:true },
+    { id:5,  name:'Responsive Blue Classic',      cat:'xFileSharing',  price:'$15', bg:'#08152a', accent:'#378ADD', responsive:true },
+    { id:6,  name:'Magnetic Blue Theme',          cat:'xFileSharing',  price:'$18', bg:'#070f28', accent:'#534AB7', responsive:true },
+    { id:7,  name:'XFS Elegant Theme',            cat:'xFileSharing',  price:'$22', bg:'#1a1005', accent:'#BA7517', responsive:true },
+    { id:8,  name:'Premium Cloud Template',       cat:'xFileSharing',  price:'$22', bg:'#05101e', accent:'#0F6E56', responsive:true },
+    { id:9,  name:'Awesome Responsive Theme',     cat:'xFileSharing',  price:'$19', bg:'#1a0510', accent:'#993556', responsive:true },
+    { id:10, name:'Professional Responsive',      cat:'xVideoSharing', price:'$24', bg:'#0a1628', accent:'#185FA5', responsive:true },
+    { id:11, name:'XVS Ninja Template',           cat:'xVideoSharing', price:'$19', bg:'#100a00', accent:'#e66000', responsive:false },
+    { id:12, name:'XVS Beautiful Template',       cat:'xVideoSharing', price:'$22', bg:'#0e1a10', accent:'#1D9E75', responsive:true },
+    { id:13, name:'XVS Classic Template',         cat:'xVideoSharing', price:'$17', bg:'#12101a', accent:'#7F77DD', responsive:false },
+    { id:14, name:'Black & Blue Theme',           cat:'xVideoSharing', price:'$19', bg:'#060e20', accent:'#185FA5', responsive:true },
+    { id:15, name:'Orange Video Theme',           cat:'xVideoSharing', price:'$17', bg:'#1a0800', accent:'#D85A30', responsive:false },
+    { id:16, name:'Responsive Beautiful XIS',     cat:'xImageSharing', price:'$19', bg:'#0e1a10', accent:'#1D9E75', responsive:true },
+    { id:17, name:'Responsive Classy XIS',        cat:'xImageSharing', price:'$19', bg:'#12101a', accent:'#7F77DD', responsive:true },
+    { id:18, name:'XFM Premium Template',         cat:'xFileMirror',   price:'$22', bg:'#0a1628', accent:'#185FA5', responsive:true },
+    { id:19, name:'XFM Mega Clone Blue',          cat:'xFileMirror',   price:'$19', bg:'#060e20', accent:'#378ADD', responsive:false },
+    { id:20, name:'Yetishare Responsive Red',     cat:'Yetishare',     price:'$22', bg:'#1a0505', accent:'#E24B4A', responsive:true },
+    { id:21, name:'Yetishare Responsive Orange',  cat:'Yetishare',     price:'$22', bg:'#1a0a00', accent:'#D85A30', responsive:true },
+    { id:22, name:'Yetishare Mega Clone',         cat:'Yetishare',     price:'$24', bg:'#08152a', accent:'#185FA5', responsive:true },
+    { id:23, name:'Yetishare Awesome Responsive', cat:'Yetishare',     price:'$19', bg:'#12101a', accent:'#7F77DD', responsive:true },
+    { id:24, name:'Exclusive Pro Theme',          cat:'Exclusive',     price:'$35', bg:'#060e1a', accent:'#00c2a8', responsive:true },
+    { id:25, name:'Exclusive Dark Elite',         cat:'Exclusive',     price:'$35', bg:'#0f0a20', accent:'#7F77DD', responsive:true },
+  ];
+
+  const catBadgeClass = {
+    'xFileSharing':  'cat-file',
+    'xVideoSharing': 'cat-video',
+    'xImageSharing': 'cat-image',
+    'xFileMirror':   'cat-mirror',
+    'Yetishare':     'cat-yeti',
+    'Exclusive':     'cat-excl',
+  };
+
+  /* ── Page switching ─────────────────────────────────── */
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + name).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* ── Render theme card ─────────────────────────────── */
+  function renderCard(theme) {
+    return `
+      <div class="col-sm-6 col-md-4 col-xl-3 theme-card-wrapper" data-cat="${theme.cat}">
+        <a href="#" class="theme-card" onclick="openDetail(${theme.id});return false;">
+          <div class="theme-thumb">
+            <div class="theme-thumb-placeholder" style="background:${theme.bg};">
+              <div class="tp-bar accent" style="background:${theme.accent};opacity:0.75;width:55%;"></div>
+              <div class="tp-bar" style="width:35%;"></div>
+              <div class="tp-row">
+                <div class="tp-block a" style="background:${theme.accent};opacity:0.25;"></div>
+                <div class="tp-block"></div>
+                <div class="tp-block"></div>
+              </div>
+              <div class="tp-row" style="opacity:0.5;">
+                <div class="tp-block"></div>
+                <div class="tp-block"></div>
+                <div class="tp-block"></div>
+              </div>
+            </div>
+            <div class="theme-overlay">
+              <span class="btn-overlay btn-overlay-ghost"><i class="bi bi-eye"></i> Preview</span>
+              <span class="btn-overlay btn-overlay-solid"><i class="bi bi-cart3"></i> Buy</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="theme-name">${theme.name}</div>
+            <div class="theme-meta">
+              <span class="cat-badge ${catBadgeClass[theme.cat]}">${theme.cat}</span>
+              <span class="theme-price">${theme.price}</span>
+            </div>
+          </div>
+        </a>
+      </div>`;
+  }
+
+  /* ── Initial render ─────────────────────────────────── */
+  function renderGrid(filter) {
+    const grid = document.getElementById('themes-grid');
+    const filtered = filter === 'All' ? themes : themes.filter(t => t.cat === filter);
+    grid.innerHTML = filtered.map(renderCard).join('');
+    document.getElementById('theme-count').textContent = filtered.length + ' theme' + (filtered.length !== 1 ? 's' : '');
+  }
+
+  /* ── Filter ─────────────────────────────────────────── */
+  function filterCategory(cat) {
+    document.querySelectorAll('.filter-pill').forEach(btn => {
+      btn.classList.toggle('active',
+        (cat === 'All' && btn.textContent.trim() === 'All themes') ||
+        btn.textContent.trim() === cat
+      );
+    });
+    renderGrid(cat);
+    const el = document.getElementById('themes');
+    if (el) { setTimeout(() => el.scrollIntoView({ behavior:'smooth', block:'start' }), 50); }
+    showPage('home');
+  }
+
+  /* ── Open detail ────────────────────────────────────── */
+  function openDetail(id) {
+    const t = themes[id];
+    document.getElementById('detail-breadcrumb-name').textContent = t.name;
+    document.getElementById('detail-cat-link').textContent = t.cat + ' themes';
+    document.getElementById('detail-price').textContent = t.price;
+    const badge = document.getElementById('detail-cat-badge');
+    badge.textContent = t.cat;
+    badge.className = 'cat-badge ' + catBadgeClass[t.cat];
+    const dpAccent = document.getElementById('detail-preview-accent');
+    if (dpAccent) dpAccent.style.background = t.accent + '55';
+    showPage('detail');
+  }
+
+  /* ── Tab switching ─────────────────────────────────── */
+  function switchTab(name, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.dtab').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  /* ── Form submit ────────────────────────────────────── */
+  function submitForm() {
+    const name  = document.getElementById('fname').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    const script = document.getElementById('fscript').value;
+    const type  = document.getElementById('freqtype').value;
+    const details = document.getElementById('fdetails').value.trim();
+    const agreed = document.getElementById('fagree').checked;
+    if (!name || !email || !script || !type || !details || !agreed) {
+      alert('Please fill in all required fields and accept the terms.');
+      return;
+    }
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+
+  /* ── Thumb click on detail page ────────────────────── */
+  document.addEventListener('DOMContentLoaded', () => {
+    renderGrid('All');
+    document.querySelectorAll('.thumb-mini').forEach((t, i) => {
+      t.addEventListener('click', () => {
+        document.querySelectorAll('.thumb-mini').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+      });
+    });
+  });
+</script>
+</body>
+</html>
