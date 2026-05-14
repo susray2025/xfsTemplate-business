@@ -1,2 +1,2 @@
 # xfsTemplate-business
-xfilesharingTemplates wibsite new look
+xfilesharingTemplates website new look
